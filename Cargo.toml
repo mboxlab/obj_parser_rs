@@ -1,0 +1,13 @@
+[package]
+name = "obj_parser_rs"
+description = "Binary module that adds some extra functions to the gmod"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+rglua = "3.0.0-beta2"
+wavefront = { path = "../wavefront" }
