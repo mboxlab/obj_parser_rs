@@ -8,8 +8,6 @@ name: Release Packaging
 jobs:
   release:
     name: Release Packaging
-    env:
-      PROJECT_NAME_UNDERSCORE: obj_parser_rs
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
@@ -23,5 +21,5 @@ jobs:
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v2
         with:
-          name: ${{ env.PROJECT_NAME_UNDERSCORE }}
-          path: target/x86_64-pc-windows-msvc/release/${{ env.PROJECT_NAME_UNDERSCORE }}
+          name: gmcl_obj_parser_rs_win64
+          path: target/x86_64-pc-windows-msvc/release/obj_parser_rs.dll
