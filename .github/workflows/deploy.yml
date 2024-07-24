@@ -28,11 +28,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
-      - uses: mboxlab/upload-rust-binary-action@v1
+      - uses: mboxlab/upload-rust-binary-action@v1.1.0
         with:
-          # (required) Comma-separated list of binary names (non-extension portion of filename) to build and upload.
-          # Note that glob pattern is not supported yet.
-          bin: obj_parser_rs.dll
           # (optional) Target triple, default is host triple.
           # This is optional but it is recommended that this always be set to
           # clarify which target you are building for if macOS is included in
